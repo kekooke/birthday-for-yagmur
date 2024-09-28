@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Yagmur!</title>
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+#gallery .photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#gallery .photos img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#messages .message-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#messages .message {
+    background: #fff;
+    padding: 20px;
+    border-left: 5px solid #ff9a9e;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+#messages .message p {
+    font-style: italic;
+}
+
+#messages .message span {
+    display: block;
+    margin-top: 10px;
+    text-align: right;
+    font-weight: bold;
+}
+
+#countdown #timer {
+    font-size: 2em;
+    text-align: center;
+    color: #ff6f61;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #ff9a9e;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    #countdown #timer {
+        font-size: 1.5em;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HAPPY BIRTHDAY YAĞMURRRRRRRRRRR</h1>
+        <p>I HOPE YOU HAVE THE MOST BEAUTIFUL WONDERFUL BIRTHDAY EVER FILLED WITH LOTS OF LOVE AND JOY :D</p>
+    </header>
+
+    <section id="gallery">
+        <h2>Look who wishes you a happy birthday :3
+        </h2>
+        <div class="photos">
+            <!-- Add your photos here -->
+            <img src="c:\Users\User\Downloads\Untitled.png" alt="Memory 1">
+            <img src="c:\Users\User\Downloads\Untitled.jpg" alt="Memory 2">
+             
+            <!-- Add more images as needed -->
+        </div>
+    </section>
+
+    <section id="messages">
+        <h2>My message for uuu</h2>
+        <div class="message-list">
+            <!-- Add personalized messages here -->
+            <div class="message">
+                <p>Happy birthday yağmur you are genuinely one of the most love 
+                 deserving people i ever met you are one of the sweetest kindest people i met you may 
+                 not show it on the outside but i know on the inside you are a very sweet and kind soul 
+                 and i love you for that so much i know school is keeping you busy and stressed but i know
+                 yağmur for a very strong woman that will overcome it no matter what ❤️
+             </p>
+                <span>- Duo</span>
+            </div>
+            <!-- Duplicate the above block for more messages -->
+        </div>
+    </section>
+
+    <section id="countdown">
+        <h2>Birthday Countdown</h2>
+        <div id="timer">
+            <span id="days">0</span> Days 
+            <span id="hours">0</span> Hours 
+            <span id="minutes">0</span> Minutes 
+            <span id="seconds">0</span> Seconds
+        </div>
+    </section>
+
+    <footer>
+        <p>Made with ❤️ by Moaz
+        
+        </p>
+    </footer>
+
+    <!-- JavaScript for Countdown Timer -->
+    <!-- JavaScript for Countdown Timer -->
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("September 28, 2024 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+          
+          // Get today's date and time
+          var now = new Date().getTime();
+          
+          // Find the distance between now and the count down date
+          var distance = countDownDate - now;
+          
+          // Time calculations for days, hours, minutes and seconds
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          // Display the result in the elements with id="days", id="hours", id="minutes", id="seconds"
+          document.getElementById("days").innerHTML = days;
+          document.getElementById("hours").innerHTML = hours;
+          document.getElementById("minutes").innerHTML = minutes;
+          document.getElementById("seconds").innerHTML = seconds;
+          
+          // If the count down is finished, display some text
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "It's your special day!";
+          }
+        }, 1000);
+    </script>
+</body>
+</html>
